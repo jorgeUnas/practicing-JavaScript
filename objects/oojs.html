@@ -43,6 +43,51 @@
         const myDataValue = "1.75m";
         person[myDataName] = myDataValue;
         
+        // Constructor
+
+        function createPerson(name) {
+          const obj = {};
+          obj.name = name;
+          obj.introduceSelf = function () {
+            console.log(`Hi! I'm ${this.name}.`);
+          };
+          return obj;
+        };
+        
+        // create as many objects from this function
+        
+        const salva = createPerson("Salva");
+        salva.name;
+        salva.introduceSelf();
+        // "Hi! I'm Salva."
+        
+        const frankie = createPerson("Frankie");
+        frankie.name;
+        frankie.introduceSelf();
+        // "Hi! I'm Frankie."
+        
+        // rewritting the code using a constructor
+        
+        function Person(name) {
+          this.name = name;
+          this.introduceSelf = function () {
+            console.log(`Hi! I'm ${this.name}.`);
+          };
+        }
+        
+        // call person
+        const jorge = new Person("Jorge");
+        salva.name;
+        salva.introduceSelf();
+        // "Hi! I'm Salva."
+        
+        const lopez = new Person("Lopez");
+        frankie.name;
+        frankie.introduceSelf();
+        // "Hi! I'm Frankie."
+        
+        
+        
     </script>
   </body>
 
