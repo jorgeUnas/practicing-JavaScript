@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Object basics: Task 3</title>
+    <title>Object basics: Task 4</title>
     <style>
       p {
         color: purple;
@@ -26,8 +26,7 @@
 
   </body>
   <script>
-  
-  // First option is using a constructor
+     // Using a constructor is the best way to dont repeat yourself
   
     function cats(name, breed, color) {
       this.name = name;
@@ -42,33 +41,10 @@
       let cat = new cats('Bertie', 'Cymric',  'white');
       cat.greeting();
       
-      let cat2 = new cats('Lopez', 'yellow',  'white');
+      let cat2 = new cats('Elfie', 'Aphrodite Giant',  'ginger');
       cat2.greeting();
-      
-    
-    // second option is modifying the greeting function 
-    
-    let cat3 = {
-      name: 'Juan',
-      breed: 'Grey',
-      color: 'Grey',
-      greeting2: function() {
-        console.log(`${this.name} the ${this.breed} is saying  Meow!`);
-      }
-    }
-    cat3.greeting2();
-    
-    
-    let cat4 = {
-      name: 'Loli',
-      breed: 'Tricolor',
-      color: 'Tricolor',
-      greeting2: function() {
-        console.log(`${this.name} the ${this.breed} is saying  Meow!`);
-      }
-    }
-    
-    cat4.greeting2();
   </script>
 
 </html>
+
+    
