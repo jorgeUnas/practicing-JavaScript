@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+
+    let bands = {
+      name: "Queen",
+      nationality: "USA",
+      genre: "pop",
+      members: 5,
+      formed: 1971,
+      split: 1991,
+      albums: [
+                {name: "Sheer Heart Attack",
+                released: 1974},
+                {name: "Hot Space",
+                released: 1982}
+              ]
+    }
+    
+    bandInfo = `${bands.name} was a band of ${bands.genre} with ${bands.members} members formed on ${bands.formed} 
+                that last ${bands.split - bands.formed} years and their first album was "${bands.albums[0].name}", released in ${bands.albums[1].released}`;
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
