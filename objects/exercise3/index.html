@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+  
+  // First option is using a constructor
+  
+    function cats(name, breed, color) {
+      this.name = name;
+      this.breed = breed;
+      this.color = color;
+      this.greeting = function() {
+        console.log(`${this.name} the ${this.breed} is saying  Meow!`);
+      };
+    }
+    
+    // create the instances:
+      let cat = new cats('Bertie', 'Cymric',  'white');
+      cat.greeting();
+      
+      let cat2 = new cats('Lopez', 'yellow',  'white');
+      cat2.greeting();
+    
+    // second option is modifying the greeting function 
+    
+    let cat3 = {
+      name: 'Juan',
+      breed: 'Grey',
+      color: 'Grey',
+      greeting2: function() {
+        console.log(`${this.name} the ${this.breed} is saying  Meow!`);
+      }
+    }
+    cat3.greeting2();
+    
+    
+    let cat4 = {
+      name: 'Loli',
+      breed: 'Tricolor',
+      color: 'Tricolor',
+      greeting2: function() {
+        console.log(`${this.name} the ${this.breed} is saying  Meow!`);
+      }
+    }
+    
+    cat4.greeting2();
+  </script>
+
+</html>
