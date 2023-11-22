@@ -180,3 +180,9 @@ console.log( arr );  // 1, 15, 2
 arr.sort( (a, b) => a - b );
 console.log( arr );
 
+// reverse
+
+arr = [1, 2, 3, 4, 5];
+arr.reverse();
+
+console.log( arr ); // 5,4,3,2,1
