@@ -118,3 +118,45 @@ console.log( fruits.lastIndexOf('Apple') ); // 2 (last Apple)
 arr = [NaN];
 console.log( arr.indexOf(NaN) ); // -1 (wrong, should be 0)
 console.log( arr.includes(NaN) );// true (correct)
+
+// FIND AND FILTER
+
+// find 
+let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+];
+
+let user = users.find(item => item.id == 1);
+
+console.log(user.name); // John
+
+// findIndex() and findLastIndex()
+
+users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"},
+  {id: 4, name: "John"}
+];
+
+// Find the index of the first John
+console.log(users.findIndex(user => user.name == 'John')); // 0
+
+// Find the index of the last John
+console.log(users.findLastIndex(user => user.name == 'John')); // 3
+
+// filter()
+
+users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+];
+
+// returns array of the first two users
+let someUsers = users.filter(item => item.id < 3);
+
+console.log(someUsers.length); // 2
+
