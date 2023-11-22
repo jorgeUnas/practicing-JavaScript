@@ -8,10 +8,10 @@ let arr = ["I", "go", "home"];
 
 delete arr[1]; // remove "go"
 
-alert( arr[1] ); // undefined
+console.log( arr[1] ); // undefined
 
 // now arr = ["I",  , "home"];
-alert( arr.length ); // 3
+console.log( arr.length ); // 3
 
 
 // Splice()
@@ -20,7 +20,7 @@ arr = ["I", "study", "JavaScript"];
 
 arr.splice(1, 1); // from index 1 remove 1 element
 
-alert( arr ); // ["I", "JavaScript"]
+console.log( arr ); // ["I", "JavaScript"]
 
  // Splice() to remove and replace
  
@@ -29,7 +29,7 @@ arr = ["I", "study", "JavaScript", "right", "now"];
 // remove 3 first elements and replace them with another
 arr.splice(0, 3, "Let's", "dance");
 
-alert( arr ) // now ["Let's", "dance", "right", "now"]
+console.log( arr ) // now ["Let's", "dance", "right", "now"]
 
 
 // What is returned by splice? 
@@ -39,7 +39,7 @@ arr = ["I", "study", "JavaScript", "right", "now"];
 // remove 2 first elements
 let removed = arr.splice(0, 2);
 
-alert( removed ); // "I", "study" <-- array of removed elements
+console.log( removed ); // "I", "study" <-- array of removed elements
 
 
 // Splice() to insert elements without delete others
@@ -51,7 +51,7 @@ arr = ["I", "study", "JavaScript"];
 // then insert "complex" and "language"
 arr.splice(2, 0, "complex", "language");
 
-alert( arr ); // "I", "study", "complex", "language", "JavaScript"
+console.log( arr ); // "I", "study", "complex", "language", "JavaScript"
 
 
 // negative numbers are allowed
@@ -63,31 +63,31 @@ arr = [1, 2, 5];
 // then insert 3 and 4
 arr.splice(-1, 0, 3, 4);
 
-alert( arr ); // 1,2,3,4,5
+console.log( arr ); // 1,2,3,4,5
 
 // Slice method 
 
 arr = ["t", "e", "s", "t"];
 
-alert( arr.slice(1, 3) ); // e,s (copy from 1 to 3)
+console.log( arr.slice(1, 3) ); // e,s (copy from 1 to 3)
 
-alert( arr.slice(-2) ); // s,t (copy from -2 till the end)
+console.log( arr.slice(-2) ); // s,t (copy from -2 till the end)
 
 // slice to create a copy of the array
 
-alert( arr.slice() ) // return arr 
+console.log( arr.slice() ) // return arr 
 
 // CONCAT
 arr = [1, 2];
 
 // create an array from: arr and [3,4]
-alert( arr.concat([3, 4]) ); // 1,2,3,4
+console.log( arr.concat([3, 4]) ); // 1,2,3,4
 
 // create an array from: arr and [3,4] and [5,6]
-alert( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
+console.log( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
 
 // create an array from: arr and [3,4], then add values 5 and 6
-alert( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
+console.log( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
 
 // Iterate: forEach
 
@@ -159,4 +159,24 @@ users = [
 let someUsers = users.filter(item => item.id < 3);
 
 console.log(someUsers.length); // 2
+
+//TRANSFORM AN ARRAY
+//map
+
+let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+console.log(lengths); 
+
+// sort(fn)
+
+arr = [ 1, 2, 15, 1654 ];
+
+// the method reorders the content of arr
+arr.sort();
+
+console.log( arr );  // 1, 15, 2
+
+// it's not sorted, because is treted as an array of string. Use:
+
+arr.sort( (a, b) => a - b );
+console.log( arr );
 
