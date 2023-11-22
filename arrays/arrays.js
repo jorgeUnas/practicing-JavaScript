@@ -96,3 +96,25 @@ alert( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
 ["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
   console.log(`${item} is at index ${index} in ${array}`);
 });
+
+//SEARCHING IN ARRAY
+
+arr = [1, 0, false];
+
+console.log( arr.indexOf(0) ); // 1
+console.log( arr.indexOf(false) ); // 2
+console.log( arr.indexOf(null) ); // -1
+
+console.log( arr.includes(1) ); // true
+
+// difference between indexOf and lastIndexOf
+
+let fruits = ['Apple', 'Orange', 'Apple']
+
+console.log( fruits.indexOf('Apple') ); // 0 (first Apple)
+console.log( fruits.lastIndexOf('Apple') ); // 2 (last Apple)
+
+// working with NaN 
+arr = [NaN];
+console.log( arr.indexOf(NaN) ); // -1 (wrong, should be 0)
+console.log( arr.includes(NaN) );// true (correct)
