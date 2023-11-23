@@ -186,3 +186,29 @@ arr = [1, 2, 3, 4, 5];
 arr.reverse();
 
 console.log( arr ); // 5,4,3,2,1
+
+// SPLIT AND JOIN
+
+//split 
+
+let names = 'Bilbo, Gandalf, Nazgul';
+
+arr = names.split(', ');
+
+for (let name of arr) {
+  console.log( `A message to ${name}.` ); // A message to Bilbo  (and other names)
+}
+
+// split into letters
+
+let str = "test";
+
+console.log( str.split('') ); // t,e,s,t
+
+// join()
+
+arr = ['Bilbo', 'Gandalf', 'Nazgul'];
+
+str = arr.join(';'); // glue the array into a string using ;
+
+console.log( str ); // Bilbo;Gandalf;Nazgul
