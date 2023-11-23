@@ -221,3 +221,17 @@ arr = [1, 2, 3, 4, 5];
 let result = arr.reduce((sum, current) => sum + current, 0);
 
 console.log(result); // 15
+
+//Array.isArray
+
+//typeof does not differentiate arrays from other objects
+
+console.log(typeof {}); // object
+console.log(typeof []); // object (same)
+
+// use Array.isArray
+
+console.log(Array.isArray({})); // false
+
+console.log(Array.isArray([])); // true
+
