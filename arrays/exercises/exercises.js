@@ -1,4 +1,4 @@
-// 1 exercise: 
+// 1 exercise: Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased
 
  //mi solution 
 
@@ -27,3 +27,20 @@ function camelize(str) {
 
 console.log(camelize("background-color"));
 console.log(camelize("list-style-image"));
+
+/* 2 exercise: Write a function filterRange(arr, a, b) that gets an array arr, 
+looks for elements with values higher or equal to a and lower or equal to b and
+return a result as an array. */
+
+
+let arr = [5, 3, 8, 1, 14, 25, 38, 54, 70];
+
+let filtered = filterRange(arr, 7, 40);  // expected: 8, 14, 25, 38 (matching values)
+
+console.log(filtered);
+
+function filterRange(arr, minimum, maximum){
+    let arrayRange = arr.filter(number => number >= minimum && number < maximum);
+    return arrayRange;
+}
+
