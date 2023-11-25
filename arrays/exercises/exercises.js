@@ -38,9 +38,32 @@ let arr = [5, 3, 8, 1, 14, 25, 38, 54, 70];
 let filtered = filterRange(arr, 7, 40);  // expected: 8, 14, 25, 38 (matching values)
 
 console.log(filtered);
+console.log(arr); // original array not modified
 
 function filterRange(arr, minimum, maximum){
     let arrayRange = arr.filter(number => number >= minimum && number < maximum);
     return arrayRange;
 }
 
+// Exercise 3: Filter range "in place"
+
+arr = [5, 3, 8, 1];
+
+filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+console.log( arr ); // [3, 1] Array was modified 
+
+function filterRangeInPlace(arr, a, b){
+    
+ //arr.map(item => (a <= item && item <= b)? item : 0);
+ 
+
+ for(let i = 0; i < arr.length; i++){
+     let val = arr[i];
+   if(val<a || val>b){
+     arr.splice(i, 1);
+     i--;
+   }
+ }
+
+}
