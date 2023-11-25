@@ -76,3 +76,21 @@ arr = [5, 2, 1, -10, 8];
 arr.sort((a, b) => b-a)
 
 console.log( arr ); // 8, 5, 2, 1, -10
+
+// Exercise 5: Copy and sort array
+
+arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+// create the function here 
+function copySorted(arr){
+    let arr2 = arr.slice();
+    arr2.sort();
+    return arr2;
+    
+    // return arr.slice().sort();
+}
+
+console.log( sorted ); // CSS, HTML, JavaScript
+console.log( arr ); // HTML, JavaScript, CSS (no changes)
