@@ -115,22 +115,23 @@ function Calculator(){
         }
         
         return this.methods[op](a, b);
+    }
+    
     // implement a method to teach the calculator a new operation
     
-        
-    }
+        this.addMethod = function(name, func){
+            this.methods[name] = func;
+        };
     
 }
 
 let calc = new Calculator;
 console.log( calc.calculate("8 + 7") ); // 10
 
-/*
-let powerCalc = new Calculator();
+let powerCalc = new Calculator;
 powerCalc.addMethod("*", (a, b) => a * b);
 powerCalc.addMethod("/", (a, b) => a / b);
 powerCalc.addMethod("**", (a, b) => a ** b);
 
 let result = powerCalc.calculate("2 ** 3");
-alert( result ); // 8
-*/
+console.log( result ); // 8
