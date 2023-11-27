@@ -94,3 +94,43 @@ function copySorted(arr){
 
 console.log( sorted ); // CSS, HTML, JavaScript
 console.log( arr ); // HTML, JavaScript, CSS (no changes)
+
+// Extendable calculator
+
+function Calculator(){
+    
+    this.methods = {
+        "+": (a, b) => a + b,
+        "-": (a, b) => a - b
+    };
+    // implement a method to sum and substract
+    this.calculate = function(str){
+        let arr = str.split(' '),
+        a = +arr[0],
+        op = arr[1],
+        b = +arr[2];
+        
+        if(!this.methods[op] || isNaN(a) || isNaN(b)){
+            return NaN;
+        }
+        
+        return this.methods[op](a, b);
+    // implement a method to teach the calculator a new operation
+    
+        
+    }
+    
+}
+
+let calc = new Calculator;
+console.log( calc.calculate("8 + 7") ); // 10
+
+/*
+let powerCalc = new Calculator();
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert( result ); // 8
+*/
