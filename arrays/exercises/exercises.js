@@ -158,3 +158,34 @@ let names = users.map(item => item.name);
 
 
 console.log( names ); // John, Pete, Mary
+
+// Exercise 7: Map to objects
+
+john = { name: "John", surname: "Smith", id: 1 };
+pete = { name: "Pete", surname: "Hunt", id: 2 };
+mary = { name: "Mary", surname: "Key", id: 3 };
+
+users = [ john, pete, mary ];
+
+let usersMapped = /* ... your code ... */
+                    users.map(user => ({
+                        fullName: `${user.name} ${user.surname}`,
+                        id: user.id
+                    }));
+
+let test = /* ... your code ... */
+                    users.map(user => [1, 2]);
+let test2 = /* ... your code ... */
+                    users.map(user => "Nothing");
+/*
+usersMapped = [
+  { fullName: "John Smith", id: 1 },
+  { fullName: "Pete Hunt", id: 2 },
+  { fullName: "Mary Key", id: 3 }
+]
+*/
+
+console.log( usersMapped[0].id ) // 1
+console.log( usersMapped[0].fullName ) // John Smith
+console.log(test);
+console.log(test2);
