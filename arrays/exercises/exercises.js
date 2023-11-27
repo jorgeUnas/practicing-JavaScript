@@ -135,3 +135,26 @@ powerCalc.addMethod("**", (a, b) => a ** b);
 
 let result = powerCalc.calculate("2 ** 3");
 console.log( result ); // 8
+
+
+// Exercise 6: Map to names
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ]; // Array of objects
+
+/* let names = [];
+
+for(let i of users){
+    names.push(i["name"]);
+}
+*/
+
+// Do it with map
+
+let names = users.map(item => item.name);
+
+
+console.log( names ); // John, Pete, Mary
