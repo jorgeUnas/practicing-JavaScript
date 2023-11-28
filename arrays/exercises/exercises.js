@@ -212,3 +212,50 @@ function sortByAge(arr){
   arr.sort((a,b) => a.age - b.age);
   //console.log(arr2)
 }
+
+
+// Exercise 9: Shuffle an array
+
+arr = [1, 2, 3];
+
+
+console.log(shuffle(arr));
+console.log(shuffle(arr));
+
+ // write your function here
+function shuffle(arr){
+    return arr.map(value => ({ value: value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+    
+ 
+}; 
+
+// counts of appearances for all possible permutations
+let count = {
+  '123': 0,
+  '132': 0,
+  '213': 0,
+  '231': 0,
+  '321': 0,
+  '312': 0
+};
+
+for (let i = 0; i < 1000000; i++) {
+  let array = [1, 2, 3];
+  count[shuffle(array).join('')]++;
+}
+
+// show counts of all possible permutations
+for (let key in count) {
+  console.log(`${key}: ${count[key]}`); // if counts are similar the solution sort the arr aleatory
+}
+
+// other solution is the algorithm called Fisher-Yates shuffle.
+
+/*function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+} */
