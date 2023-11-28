@@ -189,3 +189,26 @@ console.log( usersMapped[0].id ) // 1
 console.log( usersMapped[0].fullName ) // John Smith
 console.log(test);
 console.log(test2);
+
+//Exercise 8: Sort users by age
+
+let jorge = { name: "Jorge", age: 25 };
+let peter = { name: "Peter", age: 30 };
+let maria = { name: "Maria", age: 28 };
+
+arr = [ peter, jorge, maria ];
+
+sortByAge(arr);
+
+
+// now: [john, mary, pete]
+console.log(arr[0].name); // Jorge
+console.log(arr[1].name); // Maria
+console.log(arr[2].name); // Peter
+
+// Create the function here 
+
+function sortByAge(arr){
+  arr.sort((a,b) => a.age - b.age);
+  //console.log(arr2)
+}
