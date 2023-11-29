@@ -259,3 +259,27 @@ for (let key in count) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 } */
+
+// Exercise 10: Get average age
+
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 29 };
+
+arr = [ john, pete, mary ]; // array of objects 
+
+console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+//Write your solution here
+
+/*function getAverageAge(arr){
+    return arr.map(person => person.age)
+    .reduce((sum, current) => sum + current/arr.length, 0);
+} */
+
+// Suggested solution
+
+function getAverageAge(users) {
+  return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+}
+
