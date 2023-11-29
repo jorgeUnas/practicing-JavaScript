@@ -283,3 +283,44 @@ function getAverageAge(users) {
   return users.reduce((prev, user) => prev + user.age, 0) / users.length;
 }
 
+//Exercise 11: Filter unique array members
+
+// My solution 
+/*
+function unique(arr) {
+  let obj = {};
+  for (let word of arr){
+      if(!obj[word]){
+          obj[word] = 1;
+      }else{
+          obj[word]++;
+      }
+  };
+  
+  let arrResult = [];
+  
+  for (let key in obj){
+      arrResult.push(key);
+  }
+  return arrResult;
+}
+*/
+
+//Suggested solution 
+
+function unique(arr){
+    let result = [];
+    for (let str of arr){
+        if(!result.includes(str)){
+            result.push(str);
+        }
+    }
+    return result;
+}
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+console.log( unique(strings) ); // Hare, Krishna, :-O
+
