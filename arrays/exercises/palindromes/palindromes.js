@@ -19,6 +19,15 @@ console.log(palindromes('ZZZZ car, a man, a maracaz.'));
 console.log(palindromes('r3ace3car'));
 console.log(palindromes('rac3e3car'));
 
+/*
+Suggested solution:
+
+const palindromes = function (string) {
+  const processedString = string.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return processedString.split("").reverse().join("") == processedString;
+};
+
+*/
 
 console.log('hello');
 
