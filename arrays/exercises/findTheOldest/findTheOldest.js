@@ -10,7 +10,6 @@ const findTheOldest = function(arr) {
   
   return arr.filter(person => (person.yearOfDeath - person.yearOfBirth) == max)[0].name;
   
-  
 };
 
 const people = [
