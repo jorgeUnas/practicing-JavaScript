@@ -34,4 +34,18 @@ newBook.style.color = 'green';
 newBook.appendChild(nameNewBook);
 books.appendChild(newBook);
 
+// appending paragraphs
+
+const paraHead = document.createElement('p');
+const paraList = document.createElement('p');
+
+const textParaHead = document.createTextNode('Im a paragraph appended to the heading.');
+const textParaList = document.createTextNode('Im a paragraph appended to the list.');
+
+paraHead.appendChild(textParaHead);
+paraList.appendChild(textParaList)
+heading.appendChild(paraHead);
+books.appendChild(paraList);
+
+
 
