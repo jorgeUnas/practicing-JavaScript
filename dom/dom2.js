@@ -38,14 +38,22 @@ books.appendChild(newBook);
 
 const paraHead = document.createElement('p');
 const paraList = document.createElement('p');
+const paraPara = document.createElement('p');
 
 const textParaHead = document.createTextNode('Im a paragraph appended to the heading.');
 const textParaList = document.createTextNode('Im a paragraph appended to the list.');
+const textParaPara = document.createTextNode('Im a paragraph appended to other paragraph.');
+
 
 paraHead.appendChild(textParaHead);
-paraList.appendChild(textParaList)
+paraList.appendChild(textParaList);
+paraPara.appendChild(textParaPara);
 heading.appendChild(paraHead);
 books.appendChild(paraList);
+
+para[1].appendChild(paraPara);
+
+console.log(para[1].innerHTML);
 
 
 
