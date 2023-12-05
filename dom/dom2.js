@@ -73,3 +73,22 @@ btn4.onclick = function(){
      document.querySelector('*').style.color = 'red';
      document.querySelector('a').style.color = 'red';
  })
+
+
+//mouse events 
+
+function msOver(obj){
+    obj.textContent = 'Thank you!'; 
+}
+
+function msOut(obj){
+    obj.textContent = 'See you!'; 
+}
+
+function msDown(obj){
+    obj.textContent = 'Thank you Baby!!'; 
+}
+
+function msUp(obj){
+    obj.textContent = 'See you honney!'; 
+}
