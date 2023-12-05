@@ -55,5 +55,21 @@ para[1].appendChild(paraPara);
 
 console.log(para[1].innerHTML);
 
+// Event listeners
 
+    // 2nd method
+const btn4 = document.querySelector('#btn4');
 
+btn4.onclick = function(){
+    heading.style.color = 'red';
+}
+
+ // events listeners 
+ 
+ const btn = document.querySelector('#btn');
+ 
+ btn.addEventListener('click', function(){
+     alert('now everything is gonna be red for you baby');
+     document.querySelector('*').style.color = 'red';
+     document.querySelector('a').style.color = 'red';
+ })
