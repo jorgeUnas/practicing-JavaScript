@@ -92,3 +92,22 @@ function msDown(obj){
 function msUp(obj){
     obj.textContent = 'See you honney!'; 
 }
+
+//setTimeOut and setInterval
+
+const billar = document.querySelector('#billar');
+
+let arrayBalls = ["./images/1.png", "./images/2.png", "./images/3.png", "./images/4.png", "./images/5.png",
+"./images/6.png","./images/7.png","./images/8.png"];
+
+let arrayIndex = 0; 
+
+function changeImage(){
+    billar.setAttribute('src', arrayBalls[arrayIndex]);
+    arrayIndex++;
+    if (arrayIndex >= arrayBalls.length){
+        arrayIndex = 0;
+    }
+}
+
+setInterval(changeImage, 1000);
