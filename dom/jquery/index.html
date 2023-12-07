@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery</title>
+        <script src="jquery-3.7.1.js"></script> <!-- library--> 
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <h1>JQuery</h1>
+        <h2 id="heading2">This is JQuery</h2>
+        <ul id="books">
+            <li>Harry Potter</li>
+            <li>La iliada</li>
+        </ul>
+        <script>
+            
+            //change html
+            function changeTitle(){
+                $('h1').html('Now I am learning JQuery')
+            };
+            
+            changeTitle();
+            
+            // change a specific style
+            $('#heading2').attr('style', 'color:red').html('This heading changed');
+            
+        </script>
+    </body>
+</html>
