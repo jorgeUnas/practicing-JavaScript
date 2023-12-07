@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JQuery</title>
+        <script src="jquery-3.7.1.js"></script> <!-- library--> 
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <h1>JQuery</h1>
+        <h2 id="heading2">This is JQuery</h2>
+        <p class="para">1st paragraph</p>
+        <p class="para">2nd paragraph</p>
+        
+        <button id="hideHeading">Hide heading 2</button>
+        <button id="hidePara">Hide paragraphs</button>
+        <ul id="books">
+            <li>Harry Potter</li>
+            <li>La iliada</li>
+        </ul>
+        <script>
+            
+            //change html
+            function changeTitle(){
+                $('h1').html('Now I am learning JQuery')
+            };
+            
+            changeTitle();
+            
+            // change a specific style
+            $('#heading2').attr('style', 'color:red').html('This heading changed');
+            
+        </script>
+    </body>
+</html>
