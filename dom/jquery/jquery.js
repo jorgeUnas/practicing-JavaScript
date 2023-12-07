@@ -16,5 +16,11 @@ $(document).ready(function(){
     $('#hidePara').click(function(){ // this function is very general
        $('.para').hide(); 
     })
+    
+    //Show attribute
+    
+    $('#showValue').click(function(){
+        $('#hrefValue').text($('#anchor').attr('href'));
+    })
 
 });
