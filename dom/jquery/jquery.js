@@ -35,7 +35,7 @@ $(document).ready(function(){
         $('#3').val('Vegeta');
     })
 
-});
+
 
 
 // append some paragraphs 
@@ -48,3 +48,12 @@ text3.textContent = "I was created from the DOM";
 function append(){
     $('body').append(text1, text2, text3);
 }
+
+
+// animate
+
+$('#animate').click(function(){
+    $('#moveMe').animate({left: '500px'});
+});
+
+});
