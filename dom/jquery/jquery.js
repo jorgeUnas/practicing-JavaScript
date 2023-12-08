@@ -36,3 +36,15 @@ $(document).ready(function(){
     })
 
 });
+
+
+// append some paragraphs 
+
+let text1 = "<p>You created me using HTML</p>";
+let text2 = $("<p></p>").text("I was created with JQuery");
+let text3 = document.createElement('p');
+text3.textContent = "I was created from the DOM";
+
+function append(){
+    $('body').append(text1, text2, text3);
+}

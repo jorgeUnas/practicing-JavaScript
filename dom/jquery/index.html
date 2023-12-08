@@ -33,6 +33,10 @@
         <button id="btn2">Set HTML</button>
         <button id="btn3">Set Value</button>
         
+        <p style="color: green;">Now append some paragraphs please</p>
+        
+        <button id="apendPara" onclick="append()">Append Paragraphs</button>
+        
         <script>
             
             //change html
@@ -40,7 +44,7 @@
                 $('h1').html('Now I am learning JQuery')
             };
             
-            changeTitle();
+            changeTitle(); 
             
             // change a specific style
             $('#heading2').attr('style', 'color:red').html('This heading changed');
