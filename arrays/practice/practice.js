@@ -25,4 +25,9 @@ console.log(groceryList.length);
 // push()
 
 groceryList.push('lettuce', 'nuts');  // permanently modified
-console.log(groceryList);
+console.log(groceryList);  // [ 'bread', 'avocados', 'milk', 'lettuce', 'nuts' ]
+
+// pop()
+
+groceryList.pop();
+console.log(groceryList); // [ 'bread', 'avocados', 'milk', 'lettuce' ]
