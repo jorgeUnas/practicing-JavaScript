@@ -17,3 +17,12 @@ console.log(famousSayings[3]);
 let groceryList = ['bread', 'tomatoes', 'milk'];
 
 groceryList[1] = 'avocados';
+
+// Lenght property 
+
+console.log(groceryList.length);
+
+// push()
+
+groceryList.push('lettuce', 'nuts');  // permanently modified
+console.log(groceryList);
