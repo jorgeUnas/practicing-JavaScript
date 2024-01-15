@@ -17,8 +17,27 @@ let planetArray = spaceship.flightPath;
 console.log(crewCount);
 console.log(planetArray);
 
-// Braket notation 
+// Bracket notation 
 
 let element = ['A', 'B', 'C'][0];
 
 console.log(element);
+
+
+spaceship = {
+  'Fuel Type': 'Turbo Fuel',
+  'Active Duty': true,
+  homePlanet: 'Earth',
+  numCrew: 5
+};
+console.log(
+    spaceship['Active Duty']  // Returns true
+)
+
+// is useful in functions
+
+let returnAnyProp = (objectName, propName) => objectName[propName];
+ 
+console.log(
+    returnAnyProp(spaceship, 'homePlanet') // Returns 'Earth'
+)
