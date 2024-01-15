@@ -41,3 +41,21 @@ let returnAnyProp = (objectName, propName) => objectName[propName];
 console.log(
     returnAnyProp(spaceship, 'homePlanet') // Returns 'Earth'
 )
+
+// Property assignment 
+
+spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+
+
+spaceship.color = 'glorious gold';  // Re-assignment
+
+spaceship.numEngines = 9;  // new property
+
+delete spaceship['Secret Mission'];
+
+console.log(spaceship);
