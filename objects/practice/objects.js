@@ -199,3 +199,22 @@ const robotFactory = (model, mobile) => {
 const tinCan = robotFactory('P-500', true);
 
 tinCan.beep();
+
+
+// Property Value Shorthand
+
+robotFactory = (model, mobile) => {
+  return {
+    model,  // this is the shorthand
+    mobile,
+    beep() {
+      console.log('Beep Boop');
+    }
+  }
+}
+
+
+// To check that the property value shorthand technique worked:
+const newRobot = robotFactory('P-501', false)
+console.log(newRobot.model)
+console.log(newRobot.mobile)
