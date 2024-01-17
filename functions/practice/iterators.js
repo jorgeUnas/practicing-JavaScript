@@ -41,3 +41,4 @@ const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'
 
 const longFavoriteWords = favoriteWords.filter(word => word.length > 7);
 console.log(longFavoriteWords);
+
