@@ -116,7 +116,7 @@ for (let crewMember in spaceship.crew) {
 
  // this 
  
- const robot = {
+ let robot = {
   model: '1E78V2',
   energyLevel: 100,
   provideInfo(){
@@ -186,7 +186,7 @@ console.log(robot.numOfSensors);
 
 // Factory functions
 
-const robotFactory = (model, mobile) => {
+let robotFactory = (model, mobile) => {
   return {
     model: model,
     mobile: mobile,
@@ -199,3 +199,47 @@ const robotFactory = (model, mobile) => {
 const tinCan = robotFactory('P-500', true);
 
 tinCan.beep();
+
+
+// Property Value Shorthand
+
+robotFactory = (model, mobile) => {
+  return {
+    model,  // this is the shorthand
+    mobile,
+    beep() {
+      console.log('Beep Boop');
+    }
+  }
+}
+
+
+// To check that the property value shorthand technique worked:
+let newRobot = robotFactory('P-501', false)
+console.log(newRobot.model)
+console.log(newRobot.mobile)
+
+
+//Built-in methods
+
+robot = {
+	model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-plated',
+  energyLevel: 75
+};
+
+// What is missing in the following method call?
+const robotKeys = Object.keys(robot);
+
+console.log(robotKeys);
+
+// Declare robotEntries below this line:
+const robotEntries = Object.entries(robot)
+console.log(robotEntries);
+
+// Declare newRobot below this line:
+newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
+
+console.log(newRobot);
