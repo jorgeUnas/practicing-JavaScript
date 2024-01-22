@@ -10,25 +10,28 @@ subLength('cheesecake', 'k'); // returns 0
 
 */
 
+// Write function below
+
 const subLength = (str, char) => {
   let occurrences = {'char': 0};
   let arr = str.split('');
-  if(str.includes(char) == false){
+  
+  if(str.includes(char) == false){   // if character is not included return 0
     return 0;
   }else{
-    for(let i of arr){
+    for(let i of arr){        // count occurrences of characters
       if(i == char){
         occurrences['char']++;
       }
     }
 
-    if(occurrences['char'] > 2){
+    if(occurrences['char'] > 2 || occurrences['char'] < 2){   // 0 for characters that appears less or more than twice
       return 0;
     }else{
       for(let i = 0; i < arr.length; i++){
         for(let j = 0; j < arr.length; j++){
           if (i != j && arr[i] == arr[j]){
-            return j - i + 1;
+            return j - i + 1;                 //Distance between the same character in the string
           }
         }
       }
@@ -44,5 +47,5 @@ console.log(
 subLength('summer', 'm')
 );
 console.log(
-subLength('digitize', 'i')
+subLength('uncopyrightable', 'u')
 );
