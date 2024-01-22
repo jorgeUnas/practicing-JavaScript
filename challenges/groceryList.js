@@ -13,3 +13,31 @@ groceries( [{item: 'Bread'}, {item: 'Butter'}] );
 groceries( [{item: 'Cheese Balls'}] );
 // returns 'Cheese Balls'*/
 
+
+const groceries = arr => {
+  let newArr = arr.map(elem => elem.item);
+  let otherArr = [];
+  let str = ''
+  for(let i = 0; i < newArr.length; i++){
+    if(i == newArr.length - 1 && newArr.length != 1){
+      otherArr.push('and');
+      otherArr.push(newArr[i]);
+    }else if (i == newArr.length - 2 || newArr.length == 1){
+    otherArr.push(newArr[i]);
+    }else{
+      otherArr.push(newArr[i] + ',')
+    }
+  }
+  str = otherArr.join(' ')
+  return str;
+}
+
+console.log(
+  groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] )
+)
+console.log(
+  groceries([{item: 'Lettuce'}, {item: 'Onions'}, {item: 'Tomatoes'}])
+)
+console.log(
+  groceries([{item: 'Ice Cream'}])
+)
