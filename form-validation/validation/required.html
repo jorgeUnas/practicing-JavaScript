@@ -13,7 +13,17 @@
           
         <label for="username">Username:</label>
         <br>
-        <input id="username" name="username" type="text" required minlength="3" maxlength="15" >
+        <input id="username" name="username" type="text" required minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+">
+        <br>
+        
+        <label for="pw">Password:</label>
+        <br>
+        <input id="pw" name="pw" type="password" required minlength="8" maxlength="15">
+        <br>
+        
+        <label for="payment">Credit Card Number (no spaces):</label>
+         <br>
+        <input id="payment" name="payment" type="text" required pattern="[0-9]{14,16}">
         <br>
         
         <label for="guess">Enter a number between 1-10:</label>
