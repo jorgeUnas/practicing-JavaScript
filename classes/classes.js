@@ -22,3 +22,15 @@ class Dog {
   halley.incrementBehavior(); // Add one to behavior
   console.log(halley.name); // Print name value to console
   console.log(halley.behavior); // Print behavior value to console
+  
+  
+  class Surgeon {
+  constructor(name, department) {
+    this.name = name;
+    this.department = department;
+  }
+}
+
+const surgeonRomero = new Surgeon('Francisco Romero', 'Cardiovascular'); 
+const surgeonJackson = new Surgeon('Ruth Jackson', 'Orthopedics');
+
