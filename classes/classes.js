@@ -24,10 +24,23 @@ class Dog {
   console.log(halley.behavior); // Print behavior value to console
   
   
-  class Surgeon {
+class Surgeon {
   constructor(name, department) {
-    this.name = name;
-    this.department = department;
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+  }
+  get name() {
+    return this._name;
+  }
+  get department() {
+    return this._department;
+  }
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
   }
 }
 
