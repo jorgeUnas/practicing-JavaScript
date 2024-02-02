@@ -20,5 +20,14 @@ describe('Calculate', () => {
       
       assert.strictEqual(result, expectedResult);
     });
+    it("returns zero for an empty array", ()=>{
+      const expectedResult = 0;
+      const inputArray = [];
+      
+      const result = Calculate.sum(inputArray);
+      
+      assert.strictEqual(result, expectedResult)
+      
+    });
   });
 });
