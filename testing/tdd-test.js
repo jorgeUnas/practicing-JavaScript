@@ -12,5 +12,13 @@ describe('Calculate', () => {
       //verifycation
       assert.strictEqual(result, expectedResult);
     });
+    it('returns the sum of a four-item list', () => {
+      const expectedResult = 22;
+      const inputArray = [4, 5, 6, 7]
+      
+      const result = Calculate.sum(inputArray)
+      
+      assert.strictEqual(result, expectedResult);
+    });
   });
 });
