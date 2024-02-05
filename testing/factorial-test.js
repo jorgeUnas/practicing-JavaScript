@@ -21,5 +21,14 @@ describe('Calculate', () => {
       // verify
       assert.equal(factorial, expected);
       });
+      it('0! is equal to 1', () =>{
+      // setup
+      const expected = 1;
+      const number = 0;
+      // exercise 
+      const factorial = Calculate.factorial(number);
+      // verify
+      assert.equal(factorial, expected);
+      });
     });
   });
