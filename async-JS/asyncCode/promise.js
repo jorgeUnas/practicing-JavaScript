@@ -14,7 +14,7 @@ const myExecutor = (resolve, reject) => {
 }
 
 const orderSunglasses = () => {
-  return new Promise(myExecutor);
+  return new Promise(myExecutor); // this is the promise constructor method
 }   
 
 const orderPromise = orderSunglasses();
