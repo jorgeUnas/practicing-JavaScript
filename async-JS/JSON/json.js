@@ -1,12 +1,11 @@
 // anatomy of a JSON element 
 
-{
-  "student": {
-    "name": "Rumaisa Mahoney",
-    "age": 30,
-    "fullTime": true,
-    "languages": [ "JavaScript", "HTML", "CSS" ],
-    "GPA": 3.9,
-    "favoriteSubject": null
-  }
-}
+
+// convert json into a JS object to extract data
+
+const jsonData = '{ "parent": { "name": "Sally", "age": 45, "children" : [ { "name": "Kim", "age": 3 }, { "name": "Lee", "age": 1 } ] } }';
+
+const jsObject = JSON.parse(jsonData);
+
+console.log(jsObject.parent.children);
+console.log(jsObject);
