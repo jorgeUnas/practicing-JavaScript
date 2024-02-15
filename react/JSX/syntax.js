@@ -50,3 +50,17 @@ root.render(math);
 const name = 'Gerdo';
 
 const greeting = <p>Hello, {name}!</p>;
+
+
+
+// Using variables as attributes
+
+const sideLength = "200px";
+
+const panda = (
+  <img 
+    src="images/panda.jpg" 
+    alt="panda" 
+    height={sideLength} 
+    width={sideLength} />
+);
