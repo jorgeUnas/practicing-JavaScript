@@ -24,3 +24,10 @@ const profile = (
     </article>
   </div>
 );
+
+// Writting JS inside jsx elements
+
+const container = document.getElementById('app');
+const root = createRoot(container);
+// Write code here:
+root.render(<h1>{2 + 3}</h1>);
