@@ -43,3 +43,10 @@ const math = (
   </h1>
 );
 root.render(math);
+
+
+// accessing variables from jsx expressions
+
+const name = 'Gerdo';
+
+const greeting = <p>Hello, {name}!</p>;
