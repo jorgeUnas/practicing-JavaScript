@@ -22,3 +22,10 @@ if(coinToss() == 'heads'){
 }
 
 root.render(img)
+
+
+// same expression but with ternary operator
+
+const img = <img src={pics[coinToss () === 'heads' ? 'kitty' : 'doggy']} />;
+
+root.render(img);
