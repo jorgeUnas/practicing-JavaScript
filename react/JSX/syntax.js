@@ -31,3 +31,15 @@ const container = document.getElementById('app');
 const root = createRoot(container);
 // Write code here:
 root.render(<h1>{2 + 3}</h1>);
+
+// detail the use of {} to define JS content inside jsx expressions
+
+const container = document.getElementById('app');
+const root = createRoot(container);
+// Write code here:
+const math = (
+  <h1>
+    2 + 3 = {2 + 3}  // this will output 2 + 3 = 5
+  </h1>
+);
+root.render(math);
