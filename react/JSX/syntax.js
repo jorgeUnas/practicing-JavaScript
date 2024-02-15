@@ -96,3 +96,4 @@ const kitty = (
 );
 
 root.render(kitty);
+
